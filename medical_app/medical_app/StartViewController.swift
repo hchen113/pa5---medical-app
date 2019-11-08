@@ -45,7 +45,7 @@ class StartViewController: UIViewController {
         }else if (hour! > 17){
             self.welcome.text = "Good evening, " + patient_data.name
         }else{
-            self.welcome.text = "Hello " + patient_data.name
+            self.welcome.text = "Hello, " + patient_data.name
         }
         self.date.text = "Today is \n" + String(convertedDate)
         self.day_counter.text = "Days since last flare up: " + String(day_count)
