@@ -20,7 +20,19 @@ class StartViewController: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var day_counter: UILabel!
     @IBOutlet weak var status: UILabel!
-
+    @IBOutlet weak var experiance_flare: UIButton!
+    @IBAction func status_button(_ sender: UIButton) {
+        if (patient_data.status == "clear"){
+            self.status.text = "Status is now flare up"
+            patient_data.status = "flare up"
+            experiance_flare.setTitle("symptom free", for: .normal)
+        }else if (patient_data.status == "flare up"){
+            self.status.text = "Status is now clear"
+            patient_data.status = "clear"
+            experiance_flare.setTitle("experiancing a flare up", for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,19 +62,16 @@ class StartViewController: UIViewController {
         self.date.text = "Today is \n" + String(convertedDate)
         self.day_counter.text = "Days since last flare up: " + String(day_count)
         self.status.text = "Today's status is " + status_info
-        
-        
-        
+        if (patient_data.status == "clear"){
+            experiance_flare.setTitle("experiancing a flare up", for: .normal)
+        }else{
+            experiance_flare.setTitle("symptom free", for: .normal)
+        }
+    }
+    
+    func log_status(){
         
     }
-
-   
-    
-    
-    
-
-    
-    
     
 }
 
