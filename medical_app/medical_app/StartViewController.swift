@@ -52,6 +52,8 @@ class StartViewController: UIViewController {
         self.status.text = "Today's status is " + status_info
         
         
+        
+        
     }
 
    
