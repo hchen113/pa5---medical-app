@@ -43,22 +43,19 @@ class RecordTableViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        loadSampleMeals()
     }
     
     private func loadSampleMeals() {
-         
         guard let meal1 = Meal(meal: "Breakfest", meal_name: "Cereal", key_ingredients: "Whole Grain", date: "November 10, 2019") else {
              fatalError("Unable to instantiate meal1")
          }
-         
          guard let meal2 = Meal(meal: "Lunch", meal_name: "Pho", key_ingredients: "Rice Noodles and Beef", date: "November 10, 2019") else {
              fatalError("Unable to instantiate meal2")
          }
-         
          guard let meal3 = Meal(meal: "Dinner", meal_name: "Philly Cheese Steak", key_ingredients: "White Sub with beef and vegtables", date: "November 10, 2019") else {
              fatalError("Unable to instantiate meal3")
          }
-         
          entries += [meal1, meal2, meal3]
      }
      
