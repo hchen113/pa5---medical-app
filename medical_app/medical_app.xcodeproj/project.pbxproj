@@ -17,6 +17,7 @@
 		BA149818236C76C900A3BF71 /* medical_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA149817236C76C900A3BF71 /* medical_appTests.swift */; };
 		BA149823236C76C900A3BF71 /* medical_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA149822236C76C900A3BF71 /* medical_appUITests.swift */; };
 		BA9750852375CA0A00E27C7C /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9750842375CA0A00E27C7C /* RecordTableViewController.swift */; };
+		BA9750892377FE7300E27C7C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9750882377FE7300E27C7C /* Meal.swift */; };
 		BAC5E1D2237320E8004FB642 /* RecordMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5E1D1237320E8004FB642 /* RecordMealViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		BA149822236C76C900A3BF71 /* medical_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medical_appUITests.swift; sourceTree = "<group>"; };
 		BA149824236C76C900A3BF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9750842375CA0A00E27C7C /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
+		BA9750882377FE7300E27C7C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		BAC5E1D1237320E8004FB642 /* RecordMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			children = (
 				BA1497FD236C76C800A3BF71 /* AppDelegate.swift */,
 				BA1497FF236C76C800A3BF71 /* SceneDelegate.swift */,
+				BA9750882377FE7300E27C7C /* Meal.swift */,
 				BAC5E1D1237320E8004FB642 /* RecordMealViewController.swift */,
 				BA9750842375CA0A00E27C7C /* RecordTableViewController.swift */,
 				BA149801236C76C800A3BF71 /* StartViewController.swift */,
@@ -270,6 +273,7 @@
 			files = (
 				BA149802236C76C800A3BF71 /* StartViewController.swift in Sources */,
 				BA1497FE236C76C800A3BF71 /* AppDelegate.swift in Sources */,
+				BA9750892377FE7300E27C7C /* Meal.swift in Sources */,
 				BAC5E1D2237320E8004FB642 /* RecordMealViewController.swift in Sources */,
 				BA149800236C76C800A3BF71 /* SceneDelegate.swift in Sources */,
 				BA9750852375CA0A00E27C7C /* RecordTableViewController.swift in Sources */,
