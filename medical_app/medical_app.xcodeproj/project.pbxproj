@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA099FAC237935B000F5F08A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA149803236C76C800A3BF71 /* Main.storyboard */; };
 		BA1497FE236C76C800A3BF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1497FD236C76C800A3BF71 /* AppDelegate.swift */; };
 		BA149800236C76C800A3BF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1497FF236C76C800A3BF71 /* SceneDelegate.swift */; };
 		BA149802236C76C800A3BF71 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA149801236C76C800A3BF71 /* StartViewController.swift */; };
-		BA149805236C76C800A3BF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA149803236C76C800A3BF71 /* Main.storyboard */; };
 		BA149808236C76C800A3BF71 /* medical_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA149806236C76C800A3BF71 /* medical_app.xcdatamodeld */; };
 		BA14980A236C76C900A3BF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA149809236C76C900A3BF71 /* Assets.xcassets */; };
 		BA14980D236C76C900A3BF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA14980B236C76C900A3BF71 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,7 @@
 		BA149823236C76C900A3BF71 /* medical_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA149822236C76C900A3BF71 /* medical_appUITests.swift */; };
 		BA9750852375CA0A00E27C7C /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9750842375CA0A00E27C7C /* RecordTableViewController.swift */; };
 		BA9750892377FE7300E27C7C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9750882377FE7300E27C7C /* Meal.swift */; };
+		BA97508B237911C200E27C7C /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97508A237911C200E27C7C /* MealTableViewCell.swift */; };
 		BAC5E1D2237320E8004FB642 /* RecordMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5E1D1237320E8004FB642 /* RecordMealViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,7 @@
 		BA1497FD236C76C800A3BF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA1497FF236C76C800A3BF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA149801236C76C800A3BF71 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		BA149804236C76C800A3BF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA149804236C76C800A3BF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main\U0003.storyboard"; sourceTree = "<group>"; };
 		BA149807236C76C800A3BF71 /* medical_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = medical_app.xcdatamodel; sourceTree = "<group>"; };
 		BA149809236C76C900A3BF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA14980C236C76C900A3BF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		BA149824236C76C900A3BF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9750842375CA0A00E27C7C /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		BA9750882377FE7300E27C7C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		BA97508A237911C200E27C7C /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		BAC5E1D1237320E8004FB642 /* RecordMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,10 +112,11 @@
 				BA1497FD236C76C800A3BF71 /* AppDelegate.swift */,
 				BA1497FF236C76C800A3BF71 /* SceneDelegate.swift */,
 				BA9750882377FE7300E27C7C /* Meal.swift */,
+				BA97508A237911C200E27C7C /* MealTableViewCell.swift */,
 				BAC5E1D1237320E8004FB642 /* RecordMealViewController.swift */,
 				BA9750842375CA0A00E27C7C /* RecordTableViewController.swift */,
 				BA149801236C76C800A3BF71 /* StartViewController.swift */,
-				BA149803236C76C800A3BF71 /* Main.storyboard */,
+				BA149803236C76C800A3BF71 /* Main.storyboard */,
 				BA149809236C76C900A3BF71 /* Assets.xcassets */,
 				BA14980B236C76C900A3BF71 /* LaunchScreen.storyboard */,
 				BA14980E236C76C900A3BF71 /* Info.plist */,
@@ -245,8 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA14980D236C76C900A3BF71 /* LaunchScreen.storyboard in Resources */,
+				BA099FAC237935B000F5F08A /* Main.storyboard in Resources */,
 				BA14980A236C76C900A3BF71 /* Assets.xcassets in Resources */,
-				BA149805236C76C800A3BF71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +278,7 @@
 				BA1497FE236C76C800A3BF71 /* AppDelegate.swift in Sources */,
 				BA9750892377FE7300E27C7C /* Meal.swift in Sources */,
 				BAC5E1D2237320E8004FB642 /* RecordMealViewController.swift in Sources */,
+				BA97508B237911C200E27C7C /* MealTableViewCell.swift in Sources */,
 				BA149800236C76C800A3BF71 /* SceneDelegate.swift in Sources */,
 				BA9750852375CA0A00E27C7C /* RecordTableViewController.swift in Sources */,
 				BA149808236C76C800A3BF71 /* medical_app.xcdatamodeld in Sources */,
@@ -313,12 +317,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BA149803236C76C800A3BF71 /* Main.storyboard */ = {
+		BA149803236C76C800A3BF71 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BA149804236C76C800A3BF71 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Main\U0003.storyboard";
 			sourceTree = "<group>";
 		};
 		BA14980B236C76C900A3BF71 /* LaunchScreen.storyboard */ = {

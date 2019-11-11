@@ -1,7 +1,9 @@
 import UIKit
+import os.log
 
 class RecordMealViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var meal: Meal?
     
     let pickerData = [String](arrayLiteral: "Breakfast", "Lunch", "Dinner", "Snack", "Small Meal")
 
@@ -11,6 +13,7 @@ class RecordMealViewController: UIViewController , UIPickerViewDelegate, UIPicke
     @IBOutlet weak var key_ingredients_label: UILabel!
     @IBOutlet weak var key_ingredients_textview: UITextView!
     @IBOutlet weak var date_selection_field: UITextField!
+    @IBOutlet weak var add_to_history: UIButton!
     
     
     @IBAction func date_field_edit(_ sender: UITextField) {
@@ -59,6 +62,23 @@ class RecordMealViewController: UIViewController , UIPickerViewDelegate, UIPicke
      
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         meal_selection_field.text = pickerData[row]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        guard let button = sender as? UIBarButtonItem, button === add_to_history else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let meal_name_var = meal_selection_field.text ?? ""
+        let meal_var = meal_name_textfield.text ?? ""
+        let key_ingredients_var = key_ingredients_textview.text ?? ""
+        let date_var = date_selection_field.text ?? ""
+        
+        meal = Meal(meal: meal_var, meal_name: meal_name_var, key_ingredients: key_ingredients_var, date: date_var)
     }
 
 }
