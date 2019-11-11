@@ -10,7 +10,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="StartViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,9 +60,15 @@
                                     <navigationItem title="Dashboard" id="RUR-SU-dOT">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="iWh-D7-VQ5">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="3f6-zn-Tsu" kind="show" id="6lS-ck-MrA"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="Jqn-m3-gSg">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="dGq-jF-tc2" kind="show" id="8CD-6g-kf2"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -71,6 +77,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SD3-7Z-dA9"/>
                     <connections>
                         <outlet property="date" destination="cPX-ZB-hNW" id="vSp-9A-tni"/>
                         <outlet property="day_counter" destination="axg-d7-xRw" id="lv9-g4-loi"/>
@@ -86,12 +93,12 @@
         <!--Record Meal View Controller-->
         <scene sceneID="IGS-f5-2U5">
             <objects>
-                <viewController id="dGq-jF-tc2" customClass="RecordMealViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="dGq-jF-tc2" customClass="RecordMealViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f0U-YL-mtD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFo-jm-cuT">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFo-jm-cuT">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
@@ -99,9 +106,15 @@
                                         <barButtonItem key="backBarButtonItem" title="back" id="sxn-NE-udK"/>
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="5AR-oM-byL">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="zyp-P6-MAo"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="mLJ-rg-xDM">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="5mp-fP-tzs" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Wxt-Vn-ArM"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -152,6 +165,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="date_field_edit:" destination="dGq-jF-tc2" eventType="editingDidBegin" id="avB-D8-tOO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWC-l8-fLK">
                                 <rect key="frame" x="20" y="565" width="41" height="21"/>
@@ -164,10 +180,100 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="t0o-zd-MzT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Cje-gb-0iB"/>
+                    <connections>
+                        <outlet property="add_to_history" destination="mLJ-rg-xDM" id="B7Y-mB-Rvl"/>
+                        <outlet property="date_selection_field" destination="3Xs-zO-OQ8" id="ioL-x7-o8d"/>
+                        <outlet property="key_ingredients_textfield" destination="OaG-0P-zPx" id="gpo-OU-nsE"/>
+                        <outlet property="meal_name_textfield" destination="LQv-4b-UlR" id="dsz-rq-Pyr"/>
+                        <outlet property="meal_selection_field" destination="QZM-n3-Oeo" id="lMe-4P-ptS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lq5-i8-un7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5mp-fP-tzs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="798.55072463768124" y="137.94642857142856"/>
+            <point key="canvasLocation" x="874" y="138"/>
+        </scene>
+        <!--Record Table View Controller-->
+        <scene sceneID="vVQ-t4-sai">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="3f6-zn-Tsu" customClass="RecordTableViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AHH-al-XS1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="74W-dh-pIk">
+                                <rect key="frame" x="0.0" y="85" width="414" height="777"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealTableViewCell" rowHeight="90" id="LUL-mh-1eA" customClass="MealTableViewCell" customModule="IBD_Food_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LUL-mh-1eA" id="wQL-Sc-ZEv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEp-fy-pYi">
+                                                    <rect key="frame" x="20" y="11" width="185" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-BG-wXO">
+                                                    <rect key="frame" x="213" y="11" width="181" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Eu-9o-mb4">
+                                                    <rect key="frame" x="20" y="58" width="374" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="2U9-BG-wXO" id="XMV-PJ-9Ku"/>
+                                            <outlet property="meal_name" destination="4Eu-9o-mb4" id="6Vg-th-VeB"/>
+                                            <outlet property="meal_selection" destination="LEp-fy-pYi" id="1aB-qZ-fHM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIZ-rQ-s8i">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="History" id="bKL-xf-FnG">
+                                        <barButtonItem key="leftBarButtonItem" springLoaded="YES" systemItem="reply" id="KJd-UF-pdc">
+                                            <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="psg-Q5-BBM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3oP-1Q-AGn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EjM-Vn-Se1"/>
+                    <connections>
+                        <outlet property="tableView" destination="74W-dh-pIk" id="DYR-rT-HOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tX-Mb-0Yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640.5797101449277" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="psg-Q5-BBM"/>
+    </inferredMetricsTieBreakers>
 </document>
