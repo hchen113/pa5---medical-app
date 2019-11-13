@@ -1,0 +1,229 @@
+commit cb02b0a2cdab7305cb7376f4ce3ade8f35074cbf
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 11 19:06:37 2019 -0500
+
+    Update README.md
+
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 0461a9925742524c796d1c92332edd57c30d9df5
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 11 18:58:27 2019 -0500
+
+    update
+
+ .DS_Store                                           | Bin 6148 -> 6148 bytes
+ IBD_Food_Tracker/.DS_Store                          | Bin 6148 -> 6148 bytes
+ .../UserInterfaceState.xcuserstate                  | Bin 35586 -> 35569 bytes
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard     |  10 +++++-----
+ .../RecordTableViewController.swift                 |   5 +----
+ 5 files changed, 6 insertions(+), 9 deletions(-)
+
+commit c27becf62377f142c3d0309c78635b073223b19e
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 11 12:34:35 2019 -0500
+
+    update
+
+ IBD_Food_Tracker/.DS_Store                         | Bin 0 -> 6148 bytes
+ .../IBD_Food_Tracker.xcodeproj/project.pbxproj     |  14 ++-
+ .../UserInterfaceState.xcuserstate                 | Bin 23662 -> 35586 bytes
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    | 114 ++++++++++++++++++++-
+ IBD_Food_Tracker/IBD_Food_Tracker/Meal.swift       |  63 ++++++++++++
+ .../IBD_Food_Tracker/MealTableViewCell.swift       |  22 ++++
+ .../RecordMealViewController.swift                 |  52 +++++++++-
+ .../RecordTableViewController.swift                |  82 +++++++++++++++
+ 8 files changed, 338 insertions(+), 9 deletions(-)
+
+commit 213b4a21a47000f4a0828d4230f80a90feeed007
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 11 11:03:57 2019 -0500
+
+    Re-added some files
+
+ .../IBD_Food_Tracker.xcodeproj/project.pbxproj     | 616 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 23662 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ .../IBD_Food_Tracker/AppDelegate.swift             |  82 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++
+ .../IBD_Food_Tracker/Assets.xcassets/Contents.json |   6 +
+ .../Base.lproj/LaunchScreen.storyboard             |  25 +
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    | 173 ++++++
+ .../.xccurrentversion                              |   8 +
+ .../IBD_Food_Tracker.xcdatamodel/contents          |   4 +
+ IBD_Food_Tracker/IBD_Food_Tracker/Info.plist       |  64 +++
+ .../RecordMealViewController.swift                 |  37 ++
+ .../IBD_Food_Tracker/SceneDelegate.swift           |  56 ++
+ .../IBD_Food_Tracker/StartViewController.swift     |  74 +++
+ .../IBD_Food_TrackerTests.swift                    |  34 ++
+ IBD_Food_Tracker/IBD_Food_TrackerTests/Info.plist  |  22 +
+ .../IBD_Food_TrackerUITests.swift                  |  43 ++
+ .../IBD_Food_TrackerUITests/Info.plist             |  22 +
+ 20 files changed, 1393 insertions(+)
+
+commit 3b52a3dc0154cb79880a3a85ffff32c11a8f77ff
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 11 09:48:55 2019 -0500
+
+    due to storyboard error, creating new project and read adding everything
+
+ .DS_Store                                          | Bin 8196 -> 6148 bytes
+ medical_app/.DS_Store                              | Bin 6148 -> 0 bytes
+ medical_app/medical_app.xcodeproj/project.pbxproj  | 628 ---------------------
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 -
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 -
+ .../UserInterfaceState.xcuserstate                 | Bin 60728 -> 0 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 -
+ medical_app/medical_app/.DS_Store                  | Bin 8196 -> 0 bytes
+ medical_app/medical_app/AppDelegate.swift          |  82 ---
+ .../AppIcon.appiconset/Contents.json               |  98 ----
+ .../medical_app/Assets.xcassets/Contents.json      |   6 -
+ medical_app/medical_app/Base.lproj/.DS_Store       | Bin 6148 -> 0 bytes
+ .../medical_app/Base.lproj/LaunchScreen.storyboard |  25 -
+ .../medical_app/Base.lproj/Main\003.storyboard"    | 332 -----------
+ medical_app/medical_app/Info.plist                 |  64 ---
+ medical_app/medical_app/Meal.swift                 |  63 ---
+ medical_app/medical_app/MealTableViewCell.swift    |  31 -
+ .../medical_app/RecordMealViewController.swift     |  84 ---
+ .../medical_app/RecordTableViewController.swift    |  88 ---
+ medical_app/medical_app/SceneDelegate.swift        |  56 --
+ medical_app/medical_app/StartViewController.swift  |  77 ---
+ .../medical_app.xcdatamodeld/.xccurrentversion     |   8 -
+ .../medical_app.xcdatamodel/contents               |   4 -
+ medical_app/medical_appTests/Info.plist            |  22 -
+ .../medical_appTests/medical_appTests.swift        |  34 --
+ medical_app/medical_appUITests/Info.plist          |  22 -
+ .../medical_appUITests/medical_appUITests.swift    |  43 --
+ 27 files changed, 1796 deletions(-)
+
+commit 963e7b583abc64f3b4b91eb22f8d594a418e0929
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 11 01:23:13 2019 -0500
+
+    update
+
+ .DS_Store                                          | Bin 6148 -> 8196 bytes
+ medical_app/.DS_Store                              | Bin 6148 -> 6148 bytes
+ medical_app/medical_app.xcodeproj/project.pbxproj  |  16 +--
+ .../UserInterfaceState.xcuserstate                 | Bin 44644 -> 60728 bytes
+ medical_app/medical_app/.DS_Store                  | Bin 0 -> 8196 bytes
+ medical_app/medical_app/Base.lproj/.DS_Store       | Bin 0 -> 6148 bytes
+ .../medical_app/Base.lproj/Main\003.storyboard"    | 115 ++++++++++++++-------
+ medical_app/medical_app/Info.plist                 |  32 +++---
+ medical_app/medical_app/Meal.swift                 |  37 ++++++-
+ medical_app/medical_app/MealTableViewCell.swift    |  31 ++++++
+ .../medical_app/RecordMealViewController.swift     |  20 ++++
+ .../medical_app/RecordTableViewController.swift    |  80 ++++++++++++--
+ 12 files changed, 262 insertions(+), 69 deletions(-)
+
+commit 2834421f8d3bd5d154b850c247ed050edb8ee5a1
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Sun Nov 10 21:44:39 2019 -0500
+
+    update
+
+ medical_app/medical_app.xcodeproj/project.pbxproj  |   4 +++
+ .../UserInterfaceState.xcuserstate                 | Bin 40210 -> 44644 bytes
+ medical_app/medical_app/Base.lproj/Main.storyboard |  23 +++++++++--------
+ medical_app/medical_app/Meal.swift                 |  28 +++++++++++++++++++++
+ 4 files changed, 45 insertions(+), 10 deletions(-)
+
+commit 8eb0ea5653616331335a07c0388f3b5f58521c25
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Sat Nov 9 02:30:36 2019 -0500
+
+    history
+    
+    calender and "previous meals" renamed to history
+
+ .../UserInterfaceState.xcuserstate                 | Bin 40689 -> 40210 bytes
+ medical_app/medical_app/Base.lproj/Main.storyboard |  30 ++++++++++-----------
+ 2 files changed, 15 insertions(+), 15 deletions(-)
+
+commit d46cf578b4b28b234442ab65bbf8a92070bfe488
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Sat Nov 9 02:29:00 2019 -0500
+
+    change status
+    
+    Allow patients to be able to change status from "clear" to "flare up" and vice versa. The button will dynamically relfect their current status, offering the change in their status
+
+ .../UserInterfaceState.xcuserstate                 | Bin 40118 -> 40689 bytes
+ medical_app/medical_app/Base.lproj/Main.storyboard |  25 ++++++++++++----
+ medical_app/medical_app/StartViewController.swift  |  33 +++++++++++++--------
+ 3 files changed, 40 insertions(+), 18 deletions(-)
+
+commit 3b505c294ac98605ad2dfe1632dc8bb20e750f31
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Sat Nov 9 02:01:45 2019 -0500
+
+    update
+
+ .../UserInterfaceState.xcuserstate                 | Bin 39149 -> 40118 bytes
+ medical_app/medical_app/Base.lproj/Main.storyboard | 115 ++++++++++-----------
+ medical_app/medical_app/StartViewController.swift  |   2 +
+ 3 files changed, 59 insertions(+), 58 deletions(-)
+
+commit ebf2174735f6fae0c0a461b41b7111515b967132
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Fri Nov 8 12:34:43 2019 -0500
+
+    update
+
+ .DS_Store                                           | Bin 6148 -> 6148 bytes
+ .../UserInterfaceState.xcuserstate                  | Bin 38335 -> 39149 bytes
+ medical_app/medical_app/Base.lproj/Main.storyboard  |   2 +-
+ medical_app/medical_app/StartViewController.swift   |   2 +-
+ 4 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 473b60c9a335aef7acd7fd2486fc61e0357ce226
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Fri Nov 8 12:31:14 2019 -0500
+
+    So I forgot to actually make a repository.... so yeah here
+
+ .DS_Store                                          | Bin 0 -> 6148 bytes
+ medical_app/.DS_Store                              | Bin 0 -> 6148 bytes
+ medical_app/medical_app.xcodeproj/project.pbxproj  | 620 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 38335 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ medical_app/medical_app/AppDelegate.swift          |  82 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++
+ .../medical_app/Assets.xcassets/Contents.json      |   6 +
+ .../medical_app/Base.lproj/LaunchScreen.storyboard |  25 +
+ medical_app/medical_app/Base.lproj/Main.storyboard | 274 +++++++++
+ medical_app/medical_app/Info.plist                 |  62 +++
+ .../medical_app/RecordMealViewController.swift     |  64 +++
+ .../medical_app/RecordTableViewController.swift    |  30 +
+ medical_app/medical_app/SceneDelegate.swift        |  56 ++
+ medical_app/medical_app/StartViewController.swift  |  66 +++
+ .../medical_app.xcdatamodeld/.xccurrentversion     |   8 +
+ .../medical_app.xcdatamodel/contents               |   4 +
+ medical_app/medical_appTests/Info.plist            |  22 +
+ .../medical_appTests/medical_appTests.swift        |  34 ++
+ medical_app/medical_appUITests/Info.plist          |  22 +
+ .../medical_appUITests/medical_appUITests.swift    |  43 ++
+ 23 files changed, 1545 insertions(+)
+
+commit 19af9277d94250a11cadf9e680c03b57e2d2dc27
+Author: hchen113 <hchen113@binghamton.edu>
+Date:   Fri Nov 8 12:26:13 2019 -0500
+
+    Update README.md
+
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit d571db5168fe435a8196e4b1d04b575a4f728137
+Author: hchen113 <hchen113@binghamton.edu>
+Date:   Fri Nov 8 12:25:39 2019 -0500
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
