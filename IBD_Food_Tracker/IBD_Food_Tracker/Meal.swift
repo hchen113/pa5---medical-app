@@ -42,6 +42,7 @@ class Meal:NSObject, NSCoding{
         aCoder.encode(key_ingredients, forKey: PropertyKey.key_ingredients)
         aCoder.encode(date, forKey: PropertyKey.date)
     }
+    
     required convenience init?(coder aDecoder:NSCoder) {
 
         guard let meal = aDecoder.decodeObject(forKey: PropertyKey.meal) as? String

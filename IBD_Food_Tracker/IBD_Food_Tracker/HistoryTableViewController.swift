@@ -1,9 +1,10 @@
 import UIKit
 import os.log
 
-class RecordTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class HistoryTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var entries = [Meal]()
+    
+    var entries = [AnyObject]()
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -17,16 +18,26 @@ class RecordTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "MealTableViewCell"
+        let cellIdentifier = "HistoryTableViewCell"
                
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HistoryTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of HistoryTableViewCell.")
         }
         
-        let meal = entries[indexPath.row]
-        cell.meal_selection.text = meal.meal
-        cell.meal_name.text = meal.meal_name
-        cell.date.text = meal.date
+        let object = entries[indexPath.row]
+        
+        if object is Meal{
+            let meal = object as! Meal
+            cell.selection.text = meal.meal
+            cell.discription.text = meal.meal_name
+            cell.date.text = meal.date
+        }else{
+            let symptom = object as! Symptom
+            cell.selection.text = symptom.status
+            cell.discription.text = symptom.symptom
+            cell.date.text = symptom.date
+        }
+        
         return cell
     }
     
@@ -37,12 +48,20 @@ class RecordTableViewController: UIViewController, UITableViewDataSource, UITabl
             entries.append(meal)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
+        else if let sourceViewController = sender.source as? RecordSymptomViewController, let symptom = sourceViewController.symptom {
+            let newIndexPath = IndexPath(row: entries.count, section: 0)
+            entries.append(symptom)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
         loadSampleMeals()
     }
     
@@ -53,27 +72,12 @@ class RecordTableViewController: UIViewController, UITableViewDataSource, UITabl
          guard let meal2 = Meal(meal: "Lunch", meal_name: "Pho", key_ingredients: "Rice Noodles and Beef", date: "November 10, 2019") else {
              fatalError("Unable to instantiate meal2")
          }
-         guard let meal3 = Meal(meal: "Dinner", meal_name: "Philly Cheese Steak", key_ingredients: "White Sub with beef and vegtables", date: "November 10, 2019") else {
+         guard let meal3 = Meal(meal: "Dinner", meal_name: "Philly Cheese Steak", key_ingredients: "White sub with beef and vegtables", date: "November 10, 2019") else {
              fatalError("Unable to instantiate meal3")
          }
          entries += [meal1, meal2, meal3]
      }
      
     
-    
-    
-     func saveMeals(){
-         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(entries, toFile: Meal.archive_url.path)
-         
-         if isSuccessfulSave {
-             os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
-         } else {
-             os_log("Failed to save meals...", log: OSLog.default, type: .error)
-         }
-     }
-     
-     func loadMeals() -> [Meal]?  {
-         return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.archive_url.path) as? [Meal]
-     }
 
 }

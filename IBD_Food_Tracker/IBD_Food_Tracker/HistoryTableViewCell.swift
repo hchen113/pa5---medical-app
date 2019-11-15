@@ -1,12 +1,12 @@
 import UIKit
 
-class MealTableViewCell: UITableViewCell {
+class HistoryTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var meal_selection: UILabel!
-    @IBOutlet weak var meal_name: UILabel!
+    @IBOutlet weak var selection: UILabel!
+    @IBOutlet weak var discription: UILabel!
     @IBOutlet weak var date: UILabel!
     
-
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
