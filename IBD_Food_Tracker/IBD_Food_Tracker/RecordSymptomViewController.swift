@@ -12,12 +12,11 @@ class RecordSymptomViewController: UIViewController , UIPickerViewDelegate, UIPi
     @IBOutlet weak var add_to_history: UIBarButtonItem!
     
     
-    
     @IBAction func date_field_edit(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePicker.Mode.date
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(RecordMealViewController.datePickerValueChanged), for: UIControl.Event.valueChanged)
+        datePickerView.addTarget(self, action: #selector(RecordSymptomViewController.datePickerValueChanged), for: UIControl.Event.valueChanged)
     }
     
     @objc func datePickerValueChanged(sender:UIDatePicker) {
@@ -62,21 +61,19 @@ class RecordSymptomViewController: UIViewController , UIPickerViewDelegate, UIPi
         status_selection_field.inputView = status_picker
     }
         
-        
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        super.prepare(for: segue, sender: sender)
-        
-        guard let button = sender as? UIBarButtonItem, button == add_to_history else {
-            os_log("The add_to_history button was not pressed, cancelling", log: OSLog.default, type: .debug)
-            return
+        if segue.identifier == "SymptomSegue",
+            let destinationVC = segue.destination as? HistoryTableViewController {
+            
+            let status_var = status_selection_field.text ?? ""
+            let symptom_var = symptom_textfield.text ?? ""
+            let date_var = date_selection_field.text ?? ""
+                
+            symptom = Symptom(status: status_var, symptom: symptom_var, date: date_var)
+            HistoryTableViewController.history_data.shared.entries.append(symptom!)
         }
-            
-        let status_var = status_selection_field.text ?? ""
-        let symptom_var = symptom_textfield.text ?? ""
-        let date_var = date_selection_field.text ?? ""
-            
-        symptom = Symptom(status: status_var, symptom: symptom_var, date: date_var)
     }
 
 }

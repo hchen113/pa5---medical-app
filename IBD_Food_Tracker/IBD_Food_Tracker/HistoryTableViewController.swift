@@ -4,11 +4,13 @@ import os.log
 class HistoryTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
-    
-    
-    var entries = [AnyObject]()
-    
-    
+    class history_data{
+        static let shared = history_data()
+        private init() {}
+        var entries = [AnyObject]()
+        
+    }
+
     @IBOutlet weak var tableView: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -16,7 +18,7 @@ class HistoryTableViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entries.count
+        return history_data.shared.entries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,7 +28,7 @@ class HistoryTableViewController: UIViewController, UITableViewDataSource, UITab
             fatalError("The dequeued cell is not an instance of HistoryTableViewCell.")
         }
         
-        let object = entries[indexPath.row]
+        let object = history_data.shared.entries[indexPath.row]
         
         if object is Meal{
             let meal = object as! Meal
@@ -43,28 +45,13 @@ class HistoryTableViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-
-    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? RecordMealViewController, let meal = sourceViewController.meal {
-            let newIndexPath = IndexPath(row: entries.count, section: 0)
-            entries.append(meal)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-        }
-        else if let sourceViewController = sender.source as? RecordSymptomViewController, let symptom = sourceViewController.symptom {
-            let newIndexPath = IndexPath(row: entries.count, section: 0)
-            entries.append(symptom)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-        }
-        
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        loadSampleMeals()
+        //loadSampleMeals()
     }
     
     private func loadSampleMeals() {
@@ -77,7 +64,7 @@ class HistoryTableViewController: UIViewController, UITableViewDataSource, UITab
          guard let meal3 = Meal(meal: "Dinner", meal_name: "Philly Cheese Steak", key_ingredients: "White sub with beef and vegtables", date: "November 10, 2019") else {
              fatalError("Unable to instantiate meal3")
          }
-         entries += [meal1, meal2, meal3]
+         history_data.shared.entries += [meal1, meal2, meal3]
      }
      
     

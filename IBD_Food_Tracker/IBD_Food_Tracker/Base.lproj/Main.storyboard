@@ -328,6 +328,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="date_field_edit:" destination="gBF-Ln-cFU" eventType="editingDidBegin" id="m9Q-Hi-a4h"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRf-Lt-4co">
                                 <rect key="frame" x="20" y="565" width="41" height="21"/>
@@ -360,7 +363,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UFO-4a-L4O"/>
-        <segue reference="psg-Q5-BBM"/>
+        <segue reference="a0P-j2-lTc"/>
+        <segue reference="2zj-EH-gLC"/>
     </inferredMetricsTieBreakers>
 </document>

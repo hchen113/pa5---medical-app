@@ -60,27 +60,6 @@ class RecordMealViewController: UIViewController  , UIPickerViewDelegate, UIPick
         meal_selection_field.inputView = meal_picker
     }
     
-    
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        super.prepare(for: segue, sender: sender)
-        
-        guard let button = sender as? UIBarButtonItem, button == add_to_history else {
-            os_log("The add_to_history button was not pressed, cancelling", log: OSLog.default, type: .debug)
-            return
-        }
-        
-        
-        let meal_name_var = meal_selection_field.text ?? ""
-        let meal_var = meal_name_textfield.text ?? ""
-        let key_ingredients_var = key_ingredients_textfield.text ?? ""
-        let date_var = date_selection_field.text ?? ""
-        
-        meal = Meal(meal: meal_var, meal_name: meal_name_var, key_ingredients: key_ingredients_var, date: date_var)
-    }
-    */
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MealSegue",
             let destinationVC = segue.destination as? HistoryTableViewController {
@@ -91,10 +70,7 @@ class RecordMealViewController: UIViewController  , UIPickerViewDelegate, UIPick
             let date_var = date_selection_field.text ?? ""
             
             meal = Meal(meal: meal_var, meal_name: meal_name_var, key_ingredients: key_ingredients_var, date: date_var)
-            
-            let newIndexPath = IndexPath(row: destinationVC.entries.count, section: 0)
-            destinationVC.entries.append(meal!)
-            //destinationVC.tableView.insertRows(at: [newIndexPath], with: .automatic)
+            HistoryTableViewController.history_data.shared.entries.append(meal!)
         }
     }
 
