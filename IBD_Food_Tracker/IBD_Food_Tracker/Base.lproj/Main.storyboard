@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tX-Mb-0Yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="138"/>
+            <point key="canvasLocation" x="1887" y="138"/>
         </scene>
         <!--Record Sympton View Controller-->
         <scene sceneID="WxW-M0-ZtL">
