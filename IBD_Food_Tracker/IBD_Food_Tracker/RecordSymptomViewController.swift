@@ -5,6 +5,7 @@ class RecordSymptomViewController: UIViewController , UIPickerViewDelegate, UIPi
         
     var symptom: Symptom?
     
+    
     @IBOutlet weak var status_selection_field: UITextField!
     @IBOutlet weak var symptom_textfield: UITextView!
     @IBOutlet weak var date_selection_field: UITextField!
@@ -66,8 +67,8 @@ class RecordSymptomViewController: UIViewController , UIPickerViewDelegate, UIPi
         
         super.prepare(for: segue, sender: sender)
         
-        guard let button = sender as? UIBarButtonItem, button === add_to_history else {
-            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+        guard let button = sender as? UIBarButtonItem, button == add_to_history else {
+            os_log("The add_to_history button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
             

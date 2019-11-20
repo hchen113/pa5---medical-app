@@ -8,6 +8,14 @@ class StartViewController: UIViewController {
         static var status = "clear"
     }
 
+    class history_data{
+        static let shared = history_data()
+        
+        private init() {}
+        
+        
+        
+    }
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var welcome: UILabel!

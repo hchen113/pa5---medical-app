@@ -2,6 +2,8 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
     
+
+
     @IBOutlet weak var selection: UILabel!
     @IBOutlet weak var discription: UILabel!
     @IBOutlet weak var date: UILabel!

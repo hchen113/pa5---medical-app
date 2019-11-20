@@ -114,7 +114,7 @@
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="mLJ-rg-xDM">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="5mp-fP-tzs" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Wxt-Vn-ArM"/>
+                                                <segue destination="3f6-zn-Tsu" kind="show" identifier="MealSegue" id="UFO-4a-L4O"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -191,14 +191,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lq5-i8-un7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="5mp-fP-tzs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1045" y="-585"/>
         </scene>
-        <!--Record Table View Controller-->
+        <!--History Table View Controller-->
         <scene sceneID="vVQ-t4-sai">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="3f6-zn-Tsu" customClass="RecordTableViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="3f6-zn-Tsu" customClass="HistoryTableViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AHH-al-XS1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,8 +239,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="date" destination="2U9-BG-wXO" id="XMV-PJ-9Ku"/>
-                                            <outlet property="meal_name" destination="4Eu-9o-mb4" id="6Vg-th-VeB"/>
-                                            <outlet property="meal_selection" destination="LEp-fy-pYi" id="1aB-qZ-fHM"/>
+                                            <outlet property="discription" destination="4Eu-9o-mb4" id="UFQ-SI-aC2"/>
+                                            <outlet property="selection" destination="LEp-fy-pYi" id="DLn-hr-YEe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -273,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="1887" y="138"/>
         </scene>
-        <!--Record Sympton View Controller-->
+        <!--Record Symptom View Controller-->
         <scene sceneID="WxW-M0-ZtL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gBF-Ln-cFU" customClass="RecordSymptonViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gBF-Ln-cFU" customClass="RecordSymptomViewController" customModule="IBD_Food_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V7G-z0-Wfl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,7 +295,7 @@
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="UUP-tq-1lY">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="HyZ-g4-ZzV" kind="unwind" unwindAction="unwindToMealListWithSender:" id="mby-r6-bEB"/>
+                                                <segue destination="3f6-zn-Tsu" kind="show" identifier="SymptomSegue" id="a0P-j2-lTc"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -337,7 +336,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Which meal is it?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itU-F9-V4I">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itU-F9-V4I">
                                 <rect key="frame" x="20" y="176" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -349,19 +348,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="hbG-gv-JPU"/>
                     <connections>
-                        <outlet property="add_to_history" destination="UUP-tq-1lY" id="fNl-NN-Ns2"/>
-                        <outlet property="date_selection_field" destination="yag-jK-5jl" id="1VN-Uu-chY"/>
-                        <outlet property="status_selection_field" destination="itU-F9-V4I" id="nJB-rr-kfo"/>
-                        <outlet property="symptom_textfield" destination="ifC-wP-yuB" id="JEn-De-CZ5"/>
+                        <outlet property="add_to_history" destination="UUP-tq-1lY" id="WZb-wj-bap"/>
+                        <outlet property="date_selection_field" destination="yag-jK-5jl" id="FjS-ub-GUt"/>
+                        <outlet property="status_selection_field" destination="itU-F9-V4I" id="0P3-wq-NbS"/>
+                        <outlet property="symptom_textfield" destination="ifC-wP-yuB" id="rpC-wR-zqF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgw-YW-sQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="HyZ-g4-ZzV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1045" y="684"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2zj-EH-gLC"/>
+        <segue reference="UFO-4a-L4O"/>
+        <segue reference="psg-Q5-BBM"/>
     </inferredMetricsTieBreakers>
 </document>

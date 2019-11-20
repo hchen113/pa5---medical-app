@@ -4,6 +4,8 @@ import os.log
 class HistoryTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
+    
+    
     var entries = [AnyObject]()
     
     
