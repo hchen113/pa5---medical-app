@@ -2,10 +2,12 @@ import UIKit
 
 class StartViewController: UIViewController {
     
+    let defaults = UserDefaults.standard
+    
     struct patient_data{
-        static var name = "Henry"
-        static var counter = 0
-        static var status = "clear"
+        static var name:String? = nil
+        static var counter:Int? = nil
+        static var status:String?  = nil
     }
 
     
@@ -45,21 +47,20 @@ class StartViewController: UIViewController {
         dateFormatter.dateStyle = DateFormatter.Style.full
         let convertedDate = dateFormatter.string(from: currentDate as Date)
         
-        let day_count = patient_data.counter
         let status_info = patient_data.status
         
         if (hour! < 12){
-            self.welcome.text = "Good morning, " + patient_data.name
+            self.welcome.text = "Good morning, " + (patient_data.name ?? "NULL")
         }else if (hour! > 12 && hour! < 17){
-            self.welcome.text = "Good afternoon, " + patient_data.name
+            self.welcome.text = "Good afternoon, " + (patient_data.name ?? "NULL")
         }else if (hour! > 17){
-            self.welcome.text = "Good evening, " + patient_data.name
+            self.welcome.text = "Good evening, " + (patient_data.name ?? "NULL")
         }else{
-            self.welcome.text = "Hello, " + patient_data.name
+            self.welcome.text = "Hello, " + (patient_data.name ?? "NULL")
         }
         self.date.text = "Today is \n" + String(convertedDate)
-        self.day_counter.text = "Days since last flare up: " + String(day_count)
-        self.status.text = "Today's status is " + status_info
+        self.day_counter.text = "Days since last flare up: " + String(patient_data.counter ?? 0)
+        self.status.text = "Today's status is " + (status_info ?? "NULL")
         if (patient_data.status == "clear"){
             experiance_flare.setTitle("experiancing a flare up", for: .normal)
         }else{

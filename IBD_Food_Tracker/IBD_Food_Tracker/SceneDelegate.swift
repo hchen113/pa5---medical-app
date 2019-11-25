@@ -49,6 +49,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.set(HistoryTableViewController.history_data.self, forKey: "history_array")
     }
 
 
