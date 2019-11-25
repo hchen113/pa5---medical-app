@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA274450238B7B45002DD51F /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA27444F238B7B45002DD51F /* UserDataViewController.swift */; };
 		BA2CE0192379B34C00378509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2CE0182379B34C00378509 /* AppDelegate.swift */; };
 		BA2CE01B2379B34C00378509 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2CE01A2379B34C00378509 /* SceneDelegate.swift */; };
 		BA2CE01D2379B34C00378509 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2CE01C2379B34C00378509 /* StartViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA27444F238B7B45002DD51F /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		BA2CE0152379B34C00378509 /* IBD_Food_Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBD_Food_Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2CE0182379B34C00378509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA2CE01A2379B34C00378509 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				BA2CE04F2379C2AE00378509 /* HistoryTableViewController.swift */,
 				BAF4092B237EF653006C0A94 /* RecordSymptomViewController.swift */,
 				BA2CE04B2379BB6200378509 /* RecordMealViewController.swift */,
+				BA27444F238B7B45002DD51F /* UserDataViewController.swift */,
 				BA2CE01C2379B34C00378509 /* StartViewController.swift */,
 				BA2CE01E2379B34C00378509 /* Main.storyboard */,
 				BA2CE0242379B34C00378509 /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 				BA2CE0232379B34C00378509 /* IBD_Food_Tracker.xcdatamodeld in Sources */,
 				BA2CE04E2379C01100378509 /* Meal.swift in Sources */,
 				BA2CE01B2379B34C00378509 /* SceneDelegate.swift in Sources */,
+				BA274450238B7B45002DD51F /* UserDataViewController.swift in Sources */,
 				BAF4092C237EF653006C0A94 /* RecordSymptomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
