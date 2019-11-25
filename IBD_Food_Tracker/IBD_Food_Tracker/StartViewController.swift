@@ -5,19 +5,25 @@ class StartViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     struct patient_data{
-        static var name:String? = nil
+        static var name:String! = nil
         static var counter:Int? = nil
         static var status:String?  = nil
     }
 
-    
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var welcome: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var day_counter: UILabel!
     @IBOutlet weak var experiance_flare: UIButton!
+    @IBOutlet weak var new_user_button: UIButton!
     
+    @IBAction func new_user(_ sender: UIButton) {
+        if(patient_data.name == nil){
+            let userDataVC = self.storyboard?.instantiateViewController(withIdentifier: "UserData") as! UserDataViewController
+            self.navigationController?.pushViewController(userDataVC, animated: true)
+        }
+    }
     
     @IBAction func status_button(_ sender: UIButton) {
         if (patient_data.status == "clear"){
@@ -31,12 +37,10 @@ class StartViewController: UIViewController {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        checkPatientData()
         
         let currentDate = NSDate()
         let calendar = NSCalendar.current
@@ -68,8 +72,12 @@ class StartViewController: UIViewController {
         }
     }
 
-    func log_status(){
-        
+    func checkPatientData(){
+        if(patient_data.name == nil){
+            new_user_button.isHidden = false
+        }else{
+            new_user_button.isHidden = true
+        }
     }
 
 }
