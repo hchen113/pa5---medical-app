@@ -1,3 +1,125 @@
+commit 084747caed31366a64ad96a50e0584d50f74f266
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 25 10:46:55 2019 -0500
+
+    update
+
+ .../UserInterfaceState.xcuserstate                 | Bin 41194 -> 52825 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  18 ++++
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    |  97 ++++++++++++++++-----
+ .../IBD_Food_Tracker/StartViewController.swift     |  22 +++--
+ .../IBD_Food_Tracker/UserDataViewController.swift  |  20 ++++-
+ 5 files changed, 124 insertions(+), 33 deletions(-)
+
+commit f2f32d44cb3b593033493ebeef6e66d700ab20d4
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Mon Nov 25 00:55:48 2019 -0500
+
+    user data screen
+
+ .../IBD_Food_Tracker.xcodeproj/project.pbxproj     |   4 ++
+ .../UserInterfaceState.xcuserstate                 | Bin 39674 -> 41194 bytes
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    |  48 +++++++++++++++++++--
+ .../IBD_Food_Tracker/UserDataViewController.swift  |  30 +++++++++++++
+ 4 files changed, 78 insertions(+), 4 deletions(-)
+
+commit 4214dfe8ce37052e2e05419d8f6bc64ab4b3ace7
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Sun Nov 24 21:50:58 2019 -0500
+
+    persistant data
+
+ .../UserInterfaceState.xcuserstate                 | Bin 41327 -> 39674 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  18 ------------------
+ .../IBD_Food_Tracker/SceneDelegate.swift           |   4 ++++
+ .../IBD_Food_Tracker/StartViewController.swift     |  21 +++++++++++----------
+ 4 files changed, 15 insertions(+), 28 deletions(-)
+
+commit 860b6df604af69e9327f836051bc9a2de61cd870
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Wed Nov 20 11:29:58 2019 -0500
+
+    Added App Icon
+
+ IBD App Icon.png                                    | Bin 0 -> 8538 bytes
+ IBD_Food_Tracker/.DS_Store                          | Bin 6148 -> 6148 bytes
+ .../UserInterfaceState.xcuserstate                  | Bin 41161 -> 41327 bytes
+ .../AppIcon.appiconset/Contents.json                |   3 ++-
+ .../AppIcon.appiconset/IBD App Icon.png             | Bin 0 -> 8538 bytes
+ 5 files changed, 2 insertions(+), 1 deletion(-)
+
+commit b1592d4c8e31ac440e2e701ca21612cdec704e25
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Wed Nov 20 11:06:07 2019 -0500
+
+    add_to_history and persistant history data
+
+ .../UserInterfaceState.xcuserstate                 | Bin 40034 -> 41161 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |   4 +--
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    |   7 +++--
+ .../HistoryTableViewController.swift               |  35 +++++++--------------
+ .../RecordMealViewController.swift                 |  26 +--------------
+ .../RecordSymptomViewController.swift              |  27 +++++++---------
+ .../IBD_Food_Tracker/StartViewController.swift     |   9 +-----
+ 7 files changed, 32 insertions(+), 76 deletions(-)
+
+commit 1961fc70c51494080a23ed029a2ca7fe9cee7667
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Wed Nov 20 10:40:13 2019 -0500
+
+    update
+
+ .../UserInterfaceState.xcuserstate                 | Bin 41430 -> 40034 bytes
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    |  31 ++++++++++-----------
+ .../IBD_Food_Tracker/HistoryTableViewCell.swift    |   2 ++
+ .../HistoryTableViewController.swift               |   2 ++
+ .../RecordMealViewController.swift                 |  24 ++++++++++++++--
+ .../RecordSymptomViewController.swift              |   5 ++--
+ .../IBD_Food_Tracker/StartViewController.swift     |   8 ++++++
+ 7 files changed, 52 insertions(+), 20 deletions(-)
+
+commit 945dd6f4b80fdfb3e89098800e5b30f2aa296401
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Wed Nov 20 09:49:21 2019 -0500
+
+    update
+
+ .../UserInterfaceState.xcuserstate                  | Bin 40303 -> 41430 bytes
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard     |   2 +-
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+commit 7e275a333270583b8400a35ac14fe132f37fa7d8
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Fri Nov 15 11:08:44 2019 -0500
+
+    add record symptom
+
+ .../IBD_Food_Tracker.xcodeproj/project.pbxproj     |  24 +++--
+ .../UserInterfaceState.xcuserstate                 | Bin 36377 -> 40303 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  24 +++++
+ IBD_Food_Tracker/IBD_Food_Tracker/.DS_Store        | Bin 0 -> 6148 bytes
+ .../IBD_Food_Tracker/Base.lproj/Main.storyboard    | 102 +++++++++++++++++++--
+ ...leViewCell.swift => HistoryTableViewCell.swift} |   8 +-
+ ...ller.swift => HistoryTableViewController.swift} |  54 ++++++-----
+ IBD_Food_Tracker/IBD_Food_Tracker/Meal.swift       |   1 +
+ .../RecordSymptomViewController.swift              |  84 +++++++++++++++++
+ IBD_Food_Tracker/IBD_Food_Tracker/Symptom.swift    |  54 +++++++++++
+ 10 files changed, 307 insertions(+), 44 deletions(-)
+
+commit 7c4f65c0e5076b69b4bac3dd7defc317c9d00956
+Author: Henry Chen <hchen113@binghamton.edu>
+Date:   Wed Nov 13 10:51:19 2019 -0500
+
+    screenshots
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 35569 -> 36377 bytes
+ .../Screen Shot 2019-11-11 at 6.57.40 PM.png       | Bin 0 -> 401458 bytes
+ .../Screen Shot 2019-11-11 at 6.57.55 PM.png       | Bin 0 -> 324943 bytes
+ .../Screen Shot 2019-11-11 at 6.58.11 PM.png       | Bin 0 -> 257527 bytes
+ log.txt                                            | 229 +++++++++++++++++++++
+ 6 files changed, 229 insertions(+)
+
 commit cb02b0a2cdab7305cb7376f4ce3ade8f35074cbf
 Author: Henry Chen <hchen113@binghamton.edu>
 Date:   Mon Nov 11 19:06:37 2019 -0500

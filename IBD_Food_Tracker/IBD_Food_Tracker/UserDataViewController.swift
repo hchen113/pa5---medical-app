@@ -12,24 +12,21 @@ class UserDataViewController: UIViewController {
     
     @IBOutlet weak var name_field: UITextField!
     
-    @IBAction func done_button(_ sender: UIBarButtonItem) {
-        StartViewController.patient_data.name = name_field.text
-        StartViewController.patient_data.counter = 0
-        StartViewController.patient_data.status = "clear"
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let startVC = storyboard.instantiateViewController(identifier: "StartViewController")
-        self.navigationController?.pushViewController(startVC, animated: true)
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UserDataSegue",
+            let destinationVC = segue.destination as? StartViewController {
+            
+            StartViewController.patient_data.name = name_field.text
+            StartViewController.patient_data.counter = 0
+            StartViewController.patient_data.status = "clear"
+        }
     }
     
 

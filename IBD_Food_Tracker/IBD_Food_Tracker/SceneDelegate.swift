@@ -40,6 +40,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        
+        let defaults = UserDefaults.standard
+        
+        //StartViewController.patient_data.self = defaults.object(forKey: "patient_data")
+        //HistoryTableViewController.history_data.self = defaults.object(forKey:"history_array")as? AnyObject
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -49,10 +54,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-        
         let defaults = UserDefaults.standard
-        
         defaults.set(HistoryTableViewController.history_data.self, forKey: "history_array")
+        defaults.set(StartViewController.patient_data.self, forKey:"patient_data")
+        
+        
     }
 
 

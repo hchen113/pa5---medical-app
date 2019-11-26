@@ -17,14 +17,7 @@ class StartViewController: UIViewController {
     @IBOutlet weak var day_counter: UILabel!
     @IBOutlet weak var experiance_flare: UIButton!
     @IBOutlet weak var new_user_button: UIButton!
-    
-    @IBAction func new_user(_ sender: UIButton) {
-        if(patient_data.name == nil){
-            let userDataVC = self.storyboard?.instantiateViewController(withIdentifier: "UserData") as! UserDataViewController
-            self.navigationController?.pushViewController(userDataVC, animated: true)
-        }
-    }
-    
+   
     @IBAction func status_button(_ sender: UIButton) {
         if (patient_data.status == "clear"){
             self.status.text = "Status is now flare up"
@@ -39,7 +32,6 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         checkPatientData()
         
         let currentDate = NSDate()
@@ -66,19 +58,29 @@ class StartViewController: UIViewController {
         self.day_counter.text = "Days since last flare up: " + String(patient_data.counter ?? 0)
         self.status.text = "Today's status is " + (status_info ?? "NULL")
         if (patient_data.status == "clear"){
-            experiance_flare.setTitle("experiancing a flare up", for: .normal)
+            experiance_flare.setTitle("experiancing a flare up?", for: .normal)
         }else{
-            experiance_flare.setTitle("symptom free", for: .normal)
+            experiance_flare.setTitle("symptom free?xw", for: .normal)
         }
     }
-
+    
+    
     func checkPatientData(){
         if(patient_data.name == nil){
             new_user_button.isHidden = false
+            welcome.isHidden = true
+            status.isHidden = true
+            day_counter.isHidden = true
+            experiance_flare.isHidden = true
         }else{
             new_user_button.isHidden = true
+            welcome.isHidden = false
+            status.isHidden = false
+            day_counter.isHidden = false
+            experiance_flare.isHidden = false
         }
     }
+
 
 }
 

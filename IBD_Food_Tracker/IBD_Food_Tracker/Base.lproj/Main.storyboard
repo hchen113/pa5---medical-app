@@ -80,7 +80,7 @@
                                     <color key="titleColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="new_user:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVO-Dd-Du3"/>
+                                    <segue destination="Hel-6L-xzy" kind="show" id="CLt-pT-sr9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -322,7 +322,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="Sku-xs-fIc">
                                             <color key="tintColor" red="0.20385348249999999" green="0.65342891209999998" blue="0.59733225109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <action selector="done_button:" destination="Hel-6L-xzy" id="r6J-GW-ldK"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="UserDataSegue" id="5Lu-Ul-enU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -353,13 +353,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H7Z-Pe-Cib"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hUL-hw-MOI"/>
                     <connections>
                         <outlet property="name_field" destination="Y4d-1S-dAR" id="szQ-TN-C0Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cn-yI-B5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124.6376811594203" y="780.80357142857144"/>
+            <point key="canvasLocation" x="132" y="919"/>
         </scene>
         <!--Record Symptom View Controller-->
         <scene sceneID="WxW-M0-ZtL">
@@ -453,6 +454,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6lS-ck-MrA"/>
-        <segue reference="2zj-EH-gLC"/>
+        <segue reference="5Lu-Ul-enU"/>
     </inferredMetricsTieBreakers>
 </document>
